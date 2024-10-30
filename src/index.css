@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Cinzel:wght@4 00..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Cinzel:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.aclonicareg{
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.opensans{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.landing_name{
+  @apply mb-10 font-semibold duration-300 border-b-2 border-transparent cursor-pointer focus:border-[#642a1a] hover:border-[#642a1a] ;
+}
+.head_footer{
+  @apply text-xl font-semibold;
+}
+.desc_inner{
+  @apply w-1/12 mr-10 border-transparent ring-1 duration-300 ring-red-100 rounded-lg border-l-4 hover:bg-gradient-to-r from-[#ffe8e2] to-white hover:border-[#712D2D];
+}
+.payment-sty{
+  @apply p-2 placeholder-[#6d4e45] focus:bg-white text-luxera focus:text-white rounded-md w-3/5 outline-none border-[#642a1a] border-2 focus:placeholder:text-[#d4aeae] focus:bg-luxera;
+}
+.paypage{
+  @apply flex w-1/5 my-auto duration-200 shadow-shad px-5 py-4 space-x-3 rounded-md cursor-pointer hover:scale-95;
+}
+.baskettype{
+  @apply w-3/4 bg-white px-7 text-lg py-1 rounded-md border-2 border-[#642a1a] focus:bg-luxera focus:text-white hover:bg-luxera hover:text-white;
+}
+.login{
+  @apply w-full placeholder:text-luxera outline-none  focus:text-luxera hover:text-white  rounded-full bg-transparent border-2 border-[#642a1a] py-2 px-6;
+}
+.inputlog{
+  @apply  outline-none w-[125%] bg-transparent border-2 border-[#642a1a] mx-auto rounded-full px-4 py-2 placeholder:text-[#b88374];
+}
+.labellog{
+  @apply absolute  -top-3 peer-focus:bg-transparent left-3 px-1 py-0 bg-[#ffe7e0] transition-all duration-300  ; 
+}
+.pay_img{
+  @apply w-[6%] absolute top-2 left-[51%];
+}
