@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Card_cart_list = ({ ids, setCost, remEle}) => {
   const [basket, setBasket] = useState([]); 
+  const navigate=useNavigate();
 
   useEffect(() => {
     let url = `https://dummyjson.com/products/${ids}`;
@@ -30,7 +32,7 @@ const Card_cart_list = ({ ids, setCost, remEle}) => {
   return (
     <div>
       {basket.map((item) => (
-        <div key={item.id} className='bg-white rounded-lg m-3 flex p-1'>
+        <div key={item.id} onClick={ () => navigate(`/details/${item.id}`)} className='bg-white rounded-lg m-3 flex p-1'>
           <img 
             src={item.images ? item.images[0] : ""}  
             className='w-1/3 rounded-md  bg-gradient-to-r p-2 from-[#ffe7e0] to-[#ffffff]' 
