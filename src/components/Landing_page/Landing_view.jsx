@@ -4,7 +4,7 @@ import { useNavigate,useParams,useLocation } from 'react-router-dom'
 import Card_slider from './Card_slider_new.jsx'
 import Recent_list from './Recent_list.jsx'
 import View_all from './View_all.jsx'
-import searchimg from ".\src\assets\search.png";
+import searchimg from "./src/assets/search.png";
 import dotting from "./src/assets/dotted_top.png";
 
 const Landing_view = ({recent}) => {
