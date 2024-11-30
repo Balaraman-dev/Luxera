@@ -5,6 +5,7 @@ import Card_slider from './Card_slider_new.jsx'
 import Recent_list from './Recent_list.jsx'
 import View_all from './View_all.jsx'
 import searchimg from ".\src\assets\search.png";
+import dotting from "src/assets/dotted_top.png";
 
 const Landing_view = ({recent}) => {
    const[apilist,setApilist]=useState(0);
@@ -85,7 +86,7 @@ const Landing_view = ({recent}) => {
             <li className='landing_name'>Best Value</li>
          </ul>
         <Card_slider api={apilist}/>
-        <img src="src/assets/dotted_top.png" className='flex m-auto w-14' alt="" />
+        <img src={dotting} className='flex m-auto w-14' alt="" />
       </div>
      </div>
     )
