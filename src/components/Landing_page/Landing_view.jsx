@@ -4,6 +4,7 @@ import { useNavigate,useParams,useLocation } from 'react-router-dom'
 import Card_slider from './Card_slider_new.jsx'
 import Recent_list from './Recent_list.jsx'
 import View_all from './View_all.jsx'
+import searchimg from ".\src\assets\search.png";
 
 const Landing_view = ({recent}) => {
    const[apilist,setApilist]=useState(0);
@@ -66,7 +67,7 @@ const Landing_view = ({recent}) => {
       </div>
       <div className='my-16 ml-12 '>
         <div className='flex '>
-          <img src=".\src\assets\search.png" className='w-8 ' alt="search" />
+          <img src={searchimg} className='w-8 ' alt="search" />
           <h3 className='my-auto ml-2 text-xl text-luxera'>Recent Searches</h3>
         </div>
 
