@@ -18,16 +18,20 @@ const Card_cart_list = ({ ids, setCost, remEle}) => {
         });
     }, [ids]);
   
-    const removeItem = (productId) => {
-      remEle( prev => prev.filter( ele => ele !== productId))
-    };
+      const removeItem = (productId) => {
+        remEle( prev => prev.filter( ele => ele !== productId))
+      };
 
     useEffect( () => {
       if( basket ) {
         basket.forEach(val => {
         setCost( prev => ( {...prev, [ids]:val.price}));
         })}
-    }, [basket])
+    }, [basket]);
+
+    const handleChild= (event) => {
+      event.stopPropagation();
+    };
 
   return (
     <div>
@@ -49,7 +53,8 @@ const Card_cart_list = ({ ids, setCost, remEle}) => {
               <h2>Quantity</h2>
               <input  type="number" className='outline outline-1 border-none rounded-md pl-1 w-3/12 ml-4' />
             </div>
-            <button className='bg-luxera font-thin text-white rounded-md px-7 py-1 hover:bg-[#842a11]' onClick={() => removeItem(item.id)} > Remove</button>
+            <button className='bg-luxera font-thin text-white rounded-md px-7 py-1 hover:bg-[#842a11]'  onClick={(event) => { handleChild(event); removeItem(item.id); 
+        }} > Remove</button>
           </div>
         </div>
       ))}
