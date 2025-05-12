@@ -18,10 +18,10 @@
   font-variation-settings: "wdth" 100;
 }
 .landing_name{
-  @apply mb-10 md:font-semibold duration-300 border-b-2 border-transparent cursor-pointer focus:border-[#642a1a] hover:border-[#642a1a] ;
+  @apply mb-10 md:font-semibold  duration-300 border-b-2 border-transparent cursor-pointer focus:border-[#642a1a] hover:border-[#642a1a] ;
 }
 .head_footer{
-  @apply text-xl font-semibold;
+  @apply md:text-xl text-sm font-semibold;
 }
 .desc_inner{
   @apply w-1/12 mr-10 border-transparent ring-1 duration-300 ring-red-100 rounded-lg border-l-4 hover:bg-gradient-to-r from-[#ffe8e2] to-white hover:border-[#712D2D];

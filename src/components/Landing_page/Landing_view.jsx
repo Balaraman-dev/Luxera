@@ -66,14 +66,14 @@ const Landing_view = ({recent}) => {
         </div>
         {imgs.products && (imgs.products).length>0 && <img className='md:w-5/12 w-1/3 md:max-h-500 max-h:96 cursor-pointer' src={imgs.products[2].images[0]} onClick={ () => navigate(`/details/${imgs.products[2].id}`)} alt="bed" /> } 
       </div>
-      <div className='my-16 ml-12'>
+      <div className='my-16 md:ml-12 ml-4'>
         <div className='flex '>
-          <img src={searchimg} className='md:w-8 w-6' alt="search" />
-          <h3 className='my-auto ml-2 md:text-xl text-md text-luxera'>Recent Searches</h3>
+          <img src={searchimg} className='md:w-8 w-6 mr-2' alt="search" />
+          <h3 className='my-auto md:text-xl text-md text-luxera'>Recent Searches</h3>
         </div>
 
-        <div className='flex mt-6 justify-around md:w-4/5 w-full'>
-           {itms && itms.length>0 && itms.map((val)=> <Recent_list item={val}/> ) }  
+        <div className=' flex mt-6 md:w-4/5 w-full gap-3 md:gap-8'>
+            {itms && itms.length>0 && itms.map((val)=> <Recent_list item={val}/> ) }  
         </div>
         {all && <View_all api={apilist}/>}
       </div>

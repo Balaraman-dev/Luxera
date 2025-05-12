@@ -87,26 +87,26 @@ const Card_slider_new = ({api}) => {
 
   return (
     <div className='flex mb-16 mt-8 w-25vw h-1/2 justify-center items-center'>
-      <button className='mr-3 w-11 duration-200 hover:scale-110 border-transparent rounded-full ' onClick={decrease}>
+      <button className='mr-3 md:w-11 w-7 duration-200 hover:scale-110 border-transparent rounded-full ' onClick={decrease}>
       <img src={left_arrow} alt="img" />
       </button>
         
-          {product1 && product1.length >0 && <div onClick={()=>(handleClick(product1[1].id))} className={`border-4 duration-300 py-5 ${fad? 'animate-fading scale-90':''} duration-150 border-white flex-col hover:scale-105 flex w-2/12 bg-gradient-to-b from-[rgba(255,233,227,1)] to-[rgba(255,255,255,1)] shadow-xl shadow-black-300 rounded-lg`}>
+          {product1 && product1.length >0 && <div onClick={()=>(handleClick(product1[1].id))} className={`border-4 duration-300 md:py-5 py-2 ${fad? 'animate-fading scale-90':''} duration-150 border-white flex-col hover:scale-105 flex w-2/12 bg-gradient-to-b from-[rgba(255,233,227,1)] to-[rgba(255,255,255,1)] shadow-xl shadow-black-300 rounded-lg`}>
             <img src={product1[1].images[0]} style={{maxHeight:'200px'}} className='w-8/12 mx-auto'alt="" />
-            <h5 className='m-auto py-1 mt-2  text-luxera tex t-xl font-normal capitalize'>{val1}</h5>
+            <h5 className='m-auto py-1 mt-2  text-luxera md:text-xl text-sm text-center font-normal capitalize'>{val1}</h5>
           </div> }  
           
-          { product2 && product2.length >0 && <div onClick={()=>(handleClick(product2[1].id))} className="border-4 duration-300 py-5 hover:scale-110 border-white flex flex-col z-10 justify-center w-1/5 scale-105 bg-gradient-to-b from-[rgba(255,233,227,1)] to-[rgba(255,255,255,1)] rounded-lg shadow-xl shadow-black-300">
+          { product2 && product2.length >0 && <div onClick={()=>(handleClick(product2[1].id))} className="border-4 duration-300 md:py-5 py-2 hover:scale-110 border-white flex flex-col z-10 justify-center w-1/5 scale-105 bg-gradient-to-b from-[rgba(255,233,227,1)] to-[rgba(255,255,255,1)] rounded-lg shadow-xl shadow-black-300">
             <img  src={product2[1].images[0]} alt="" style={{maxHeight:'300px'}}  className='w-10/12  mx-auto' />
-            <h5 className='m-auto mt-2 py-2  text-luxera text-xl font-normal capitalize' >{val2}</h5>
+            <h5 className='m-auto mt-2 py-2  text-luxera md:text-xl text-sm text-center font-normal capitalize' >{val2}</h5>
           </div> }
 
-          { product3 && product3.length >0  && <div onClick={()=>(handleClick(product3[1].id))} className={`border-4 duration-300  ${fad? 'animate-fading scale-90':''} py-5 border-white duration-150 flex-col hover:scale-105 text-center  flex w-2/12 bg-gradient-to-b from-[rgba(255,233,227,1)] to-[rgba(255,255,255,1)] shadow-xl shadow-black-300 rounded-lg`}>
+          { product3 && product3.length >0  && <div onClick={()=>(handleClick(product3[1].id))} className={`border-4 duration-300  ${fad? 'animate-fading scale-90':''} md:py-5 py-2 border-white duration-150 flex-col hover:scale-105 text-center  flex w-2/12 bg-gradient-to-b from-[rgba(255,233,227,1)] to-[rgba(255,255,255,1)] shadow-xl shadow-black-300 rounded-lg`}>
             <img src={product3[1].images[0]}  style={{maxHeight:'200px'}}  className='w-8/12 mx-auto 'alt="" />
-            <h5 className='m-auto mt-2  py-1  text-luxera text-xl font-normal capitalize' >{val3}</h5>
+            <h5 className='m-auto mt-2  py-1  text-luxera md:text-xl text-sm text-center font-normal capitalize' >{val3}</h5>
           </div> } 
             
-          <button className='ml-3 w-11 duration-200 hover:scale-110 rounded-full border-transparent' onClick={increase}>
+          <button className='ml-3 md:w-11 w-7 duration-200 hover:scale-110 rounded-full border-transparent' onClick={increase}>
           <img src={right_arrow} alt="img" />
           </button>       
     </div>
