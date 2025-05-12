@@ -7,7 +7,7 @@ import no_res from '../../assets/no_results.png'
 
 const Product_display_cards = ({category}) => {
   const { card_val }=useParams();
-  const[cards,setCards]=useState([]);
+  const[cards,setCards]=useState([]); 
   const location=useLocation();
   const valstate = location.state || false;
   let cate=category;

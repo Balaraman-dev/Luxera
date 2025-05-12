@@ -18,7 +18,7 @@
   font-variation-settings: "wdth" 100;
 }
 .landing_name{
-  @apply mb-10 font-semibold duration-300 border-b-2 border-transparent cursor-pointer focus:border-[#642a1a] hover:border-[#642a1a] ;
+  @apply mb-10 md:font-semibold duration-300 border-b-2 border-transparent cursor-pointer focus:border-[#642a1a] hover:border-[#642a1a] ;
 }
 .head_footer{
   @apply text-xl font-semibold;

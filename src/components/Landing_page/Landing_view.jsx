@@ -53,32 +53,32 @@ const Landing_view = ({recent}) => {
 
   return (
     <div >
-      <div className=' w-full flex leading-loose tracking-wider justify-around p-4 bg-gradient-to-r from-[#ffe7e0] to-[rgba(255,255,255,1)]'> 
+      <div className='py-8 w-full flex leading-loose tracking-wider justify-around px-4 bg-gradient-to-r from-[#ffe7e0] to-[rgb(255,255,255)]'> 
         <div className='flex flex-col justify-center'>
-          <div> <span className='text-5xl font-thin text-luxera'>Hey,</span><span className='text-4xl text-luxera font-medium'> {name||"Trendseeeker"} !</span></div>
-          <h3 className='text-5xl font-semibold text-luxera '>Raining offers for</h3>
-          <h1 className='text-5xl font-semibold text-luxera '>Hot summer !</h1>
-          <h5 className='text-luxera text-3xl font-normal'>minimum 25% on all products</h5>
+          <div> <span className='text-2xl font-thin text-luxera md:text-5xl'>Hey,</span><span className='md:text-4xl text-luxera  text-2xl font-medium'> {name||"Trendseeeker"} !</span></div>
+          <h3 className='w-3/4 md:text-5xl font-semibold text-luxera text-3xl'>Raining offers for Hot summer !</h3>
+          <h5 className='text-luxera md:text-3xl font-normal text-2xl'>Minimum 25% on all products</h5>
           <div className='flex mt-5 space-x-10'>
-            <button className='bg-luxera text-xl rounded-lg py-2 px-4 text-white duration-100 hover:scale-y-105' onClick={()=>navigate("/login")}>Shop now</button>
-            <h3 className=' text-luxera my-auto font-medium text-2xl'><button className='border-b-2 hover:scale-105 duration-150 border-b-[#642a1a]' onClick={()=>setAll(!all)}> View all </button></h3>   
+            <button className='bg-luxera md:text-xl rounded-lg py-2 px-4 text-white text-md duration-150 hover:scale-95 text-sm' onClick={()=>navigate("/login")}>Shop now</button>
+            <h3 className=' text-luxera my-auto font-medium text-2xl'>
+              <button className='bg-luxera text-sm md:text-xl rounded-lg py-2 px-4 text-white text-md duration-150 hover:scale-95' onClick={()=>setAll(!all)}> View all </button></h3>   
           </div>
         </div>
-        {imgs.products && (imgs.products).length>0 && <img className='w-5/12 cursor-pointer' src={imgs.products[2].images[0]} onClick={ () => navigate(`/details/${imgs.products[2].id}`)} alt="bed" style={{maxHeight:'500px', minHeight:'500px'}}/> } 
+        {imgs.products && (imgs.products).length>0 && <img className='md:w-5/12 w-1/3 md:max-h-500 max-h:96 cursor-pointer' src={imgs.products[2].images[0]} onClick={ () => navigate(`/details/${imgs.products[2].id}`)} alt="bed" /> } 
       </div>
-      <div className='my-16 ml-12 '>
+      <div className='my-16 ml-12'>
         <div className='flex '>
-          <img src={searchimg} className='w-8 ' alt="search" />
-          <h3 className='my-auto ml-2 text-xl text-luxera'>Recent Searches</h3>
+          <img src={searchimg} className='md:w-8 w-6' alt="search" />
+          <h3 className='my-auto ml-2 md:text-xl text-md text-luxera'>Recent Searches</h3>
         </div>
 
-        <div className='flex mt-6 justify-around w-4/5 '>
+        <div className='flex mt-6 justify-around md:w-4/5 w-full'>
            {itms && itms.length>0 && itms.map((val)=> <Recent_list item={val}/> ) }  
         </div>
         {all && <View_all api={apilist}/>}
       </div>
       <div className='py-16 bg-gradient-to-t from-[rgba(255,255,255,1)] to-[#fef4f1]'>
-         <ul className=' w-11/12 mx-auto flex justify-around text-luxera font-medium text-lg '>
+         <ul className=' w-11/12 mx-auto flex justify-around text-luxera font-medium md:text-lg text-sm gap-1 '>
             <li className='landing_name'>Trending Offer</li>
             <li className='landing_name'>Best Seller</li>
             <li className='landing_name'>Top Rated</li>
@@ -86,7 +86,7 @@ const Landing_view = ({recent}) => {
             <li className='landing_name'>Best Value</li>
          </ul>
         <Card_slider api={apilist}/>
-        <img src={dotting} className='flex m-auto w-14' alt="" />
+        <img src={dotting} className='flex m-auto md:w-14 w-10' alt="" />
       </div>
      </div>
     )

@@ -18,9 +18,9 @@ const Recent_list = ({item}) => {
     },[item]);
  
   return (
-   <div className='shadow-shad w-1/6 flex justify-center items-center flex-col py-1 rounded-2xl hover:scale-105 duration-200 ' onClick={ () => navigate(`/details/${dis.id}`)}>
-     {dis &&  <img src={dis.images[0]} className='w-2/5 mb-1 ' style={{minWidth:'90px',maxWidth:'90px',maxHeight:'90px'}} alt="img" />}
-     {dis &&  <h2 className='text-luxera text-md capitalize'>{dis.category}</h2>}
+   <div className='shadow-shad md:w-4/12 w-2/12 flex justify-center items-center flex-col py-1 rounded-2xl hover:scale-95 duration-200 ' onClick={ () => navigate(`/details/${dis.id}`)}>
+     {dis &&  <img src={dis.images[0]} className='md:min-w-90 md:max-w-90 md:max-h-90 md:mb-1' alt="img" />}
+     {dis &&  <h2 className='text-luxera text-[12px] md:text-md text-center capitalize'>{dis.category}</h2>}
    </div>
   ) 
 } 
