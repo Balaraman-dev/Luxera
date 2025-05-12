@@ -92,41 +92,46 @@ const Product_desc = ( { cart } ) => {
 
   return (
     <div>
-       <div  className='flex mt-15m-auto '>
-        <div className='relative  w-1/2 ml-1  bg-gradient-to-r from-[#ffe8e2] to-[rgba(255,255,255,1)] h-1/12'> 
-          <div className='w-1/4 relative'>
-            {list && <img src={lxr} className='absolute top-6' alt="" />}
+       <div  className='md:flex  mt-15m-auto '>
+        <div className='relative  md:w-1/2 w-full ml-1  bg-gradient-to-r from-[#ffe8e2] to-[rgba(255,255,255,1)] h-1/12'> 
+          <div className='md:w-1/4 w-1/4 relative'>
+            {list && <img src={lxr} className='absolute top-6 ' alt="" />}
           </div>  
-          {list && <img src={list.images[indimg]} className='w-3/4 z-0 mx-auto mt-10' alt="" style={{maxWidth:'400px',minWidth:'300px'}} /> }
-          <div className='w-full flex justify-center flex-col items-end z-20 bottom-5 right-4 space-y-2 absolute'>
-            {list && 
-            (list.images).map((img,index)=>(
-              <img key={index} src={img} style={{maxHeight:'60px'}} onClick={()=>(setIndImg(index))} alt="" className='desc_inner '/>
-            ))}
+
+          {list && <img src={list.images[indimg]} className='z-0 mx-auto md:mt-10 mt-4 md:max-w-[400px] md:min-w-[400px] w-2/3' alt=""/> }
+
+          <div className='w-full  flex justify-center flex-col items-end z-20 bottom-3 md:right-6 md:bottom-5 -right-3 space-y-2 absolute'>
+              {list && 
+              (list.images).map((img,index)=>(
+                <img key={index} src={img} onClick={()=>(setIndImg(index))} alt="" className='desc_inner min-w-8'/>
+              ))}
           </div>
+
         </div>
-        {list && <div className='w-1/2  text-luxera space-y-3'>
-         <h2 className='text-2xl capitalize'>{list.brand}| {list.category}| Modern |{list.tags[1]} |Attractive {list.tags[0]}| Limited Edition |Sophisticated</h2>
-         <span className='text-xl font-medium'> ₹ {Number(((list.price)*83.98).toFixed(0)).toLocaleString('en-IN')} </span> <span>{list.discountPercentage}% off</span>
-         <h3>{list.description}</h3>
+        {list && <div className='md:w-1/2 w-full text-luxera space-y-3 p-3'>
+         <h2 className='md:text-2xl sm:text-xl  capitalize mb-2'>{list.brand}| {list.category}| Modern |{list.tags[1]} |Attractive {list.tags[0]}| Limited Edition |Sophisticated</h2>
+         <span className='text-xl font-medium '> ₹ {Number(((list.price)*83.98).toFixed(0)).toLocaleString('en-IN')} </span> <span>{list.discountPercentage}% off</span>
+         <h3 className='text-sm md:text-lg'>{list.description}</h3>
          <li className='ml-4 font-semibold'>{list.warrantyInformation}</li>
          <li className='ml-4 font-semibold'>{list.shippingInformation}</li>
-         <li className='ml-4 font-bold text-luxera'>Overall - {list.rating} *</li> 
-         <h1 className='text-2xl text-green-700'>{list.availabilityStatus}</h1>
-            <div className='flex h-1/12 w-10 space-x-24 ml-8 pt-4'>
+         <li className='ml-4 font-bold text-luxera'>Overall Rating - {list.rating} *</li> 
+         <h1 className='text-xl md:text-2xl text-green-700'>{list.availabilityStatus}</h1>
+            <div className='sm:flex h-1/12 w-10 space-x-24 ml-8 pt-4 hidden sm:block'>
                 <img src={Imgdes1} className='w-10/12 h-10/12' alt="" />
                 <img src={Imgdes2} className='w-10/12 h-10/12' alt="" />
                 <img src={Imgdes3} className='w-10/12 h-10/12' alt="" />
                 <img src={Imgdes4} className='w-10/12 h-10/12' alt="" />
             </div>
-            <ul className='flex space-x-8 ml-2 font-thin'>
+            <ul className='sm:flex md:flex-row flex-col md:space-x-8 ml-2 md:font-thin sm:block hidden'>
               <li>Free shipping</li>
               <li>Fast delivery</li>
               <li>Online support </li>
               <li>Payment Methods</li> 
             </ul> 
-            <div className='flex w-full space-x-10 py-10'>
+            <div className='w-full flex md:flex  md:space-x-10 md:py-10'>
+              
                 <Buton onClick={()=>navigate(`/payment/${(list.price)}`)} btn="Buy now"/>
+             
                   <div className='relative'>
                     <Buton onClick={()=>setClick(list.id)} btn="Add to cart"/>
                     {click && <img src={success} className='absolute right-2 -top-3 border-2 border-[#642a1a] rounded-full w-2/12' alt="" />}  
@@ -136,8 +141,8 @@ const Product_desc = ( { cart } ) => {
         </div>}
        </div>
 
-       {list && <div className='space-y-3 ml-32 mt-8'>
-        <h2 className='text-luxera font-normal text-2xl'> Rating And Reviews </h2>
+       {list && <div className='md:space-y-3 space-y-2 ml-7 md:ml-32 mt-4 md:mt-8'>
+        <h2 className='text-luxera font-normal md:text-2xl'> Rating And Reviews </h2>
 
         <Product_desc_sliderreview bar={5} val={5}/>
         <Product_desc_sliderreview bar={2} val={4}/>
@@ -147,15 +152,15 @@ const Product_desc = ( { cart } ) => {
 
        </div>}
 
-       <div className='flex space-x-7 my-14 w-11/12 mx-auto'>
+       <div className='flex md:flex-row flex-col my-7 md:my-14 w-full md:w-11/12 md:mx-auto mx-2.5 gap-4'>
         {list && list.reviews.map((element)=>( <Product_desc_review_card listr={element}/>))}
        </div>
 
-      <div className='w-11/12 m-auto mt-20 mb-32'>
-        <h2 className='text-luxera font-  my-4 text-xl'>Similar Products</h2>
+      <div className='w-11/12 m-auto md:mt-20 mt-10 md:mb-32 mb-16'>
+        <h2 className='text-luxera my-4 md:text-xl'>Similar Products</h2>
 
       <div className="relative w-full flex items-center justify-center overflow-hidden">
-          <button onClick={prevSlide} className="absolute w-12 left-0 z-10 rounded-full border-transparent hover:scale-95"> 
+          <button onClick={prevSlide} className="absolute md:w-12 md:block hidden left-0 z-10 w-8 rounded-full border-transparent hover:scale-95"> 
              <img src={left_arrow} className="w-full rounded-full" alt="arrow" />
           </button>
 
@@ -166,7 +171,7 @@ const Product_desc = ( { cart } ) => {
                 ))}
                 </div>
             </div>
-            <button onClick={nextSlide} className="absolute w-12 right-0 z-10 hover:scale-95 rounded-full border-transparent ">
+            <button onClick={nextSlide} className="absolute md:w-12 w-8 right-0 z-10 hover:scale-95 rounded-full md:block hidden border-transparent ">
                 <img src={right_arrow} alt="arrow" />
             </button>
       </div>

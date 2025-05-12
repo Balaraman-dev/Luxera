@@ -42,7 +42,7 @@ const Header_sticky = ({recent}) => {
 return (
     <div className='w-full flex gap-8 my-3 justify-between sm:py-6 py-3 sticky top-0 z-20 backdrop-blur-3xl text-luxera'>
          <div className='flex md:space-x-16 md:ml-32'>
-            <h3 className='aclonicareg md:text-3xl md:m-auto sm:text-xl my-auto md:ml-8 sm:ml-5 ml-2 font-bold'>Luxera</h3>
+            <h3 className='aclonicareg md:text-3xl md:m-auto sm:text-xl my-auto md:ml-8 sm:ml-7 ml-2 font-bold'>Luxera</h3>
             <ul className='md:flex space-x-6 pt-1  hidden md:block'>  
                 <Link to="/"><h5 className=' md:text-lg cursor-pointer'>Home</h5></Link>
                 <h5 className='md:text-lg cursor-pointer '>Features</h5>
