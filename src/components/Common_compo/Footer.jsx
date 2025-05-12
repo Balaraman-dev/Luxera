@@ -28,7 +28,7 @@ const Footer = () => {
        <div className='p-4'>
         <h1 className='head_footer'>BE ACTIVE</h1>
         <h2>Sign up to stay Updated on new Products</h2>
-        <div className='mt-4 border-2 border-gray-400 md:p-2 p-1 flex rounded-lg relative'>  
+        <div className='mt-4 border-2 border-gray-400 md:p-2 p-1 flex rounded-lg relative hidden sm:block'>  
           <input className='outline-none ' type="text" placeholder='Email Address'/>
           <button onClick={()=>(alert("Subscribed 🛒"))}  className='bg-luxera md:px-4 md:py-1 px-2 font-normal hover:scale-95 text-white rounded-lg m-auto absolute right-2 top-1'>SUBSCRIBE</button>  
         </div>

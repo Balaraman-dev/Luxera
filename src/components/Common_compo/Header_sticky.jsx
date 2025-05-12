@@ -40,12 +40,12 @@ const Header_sticky = ({recent}) => {
     }
 
 return (
-    <div className='flex my-3 justify-between py-6 sticky top-0 z-20 backdrop-blur-3xl text-luxera '>
-         <div className='flex space-x-16 ml-32'>
-            <h3 className='aclonicareg text-3xl font-bold'>Luxera</h3>
-            <ul className='flex space-x-6 pt-1'>  
-                <Link to="/"><h5 className=' text-lg cursor-pointer'>Home</h5></Link>
-                <h5 className='text-lg cursor-pointer '>Features</h5>
+    <div className='w-full flex gap-8 my-3 justify-between sm:py-6 py-3 sticky top-0 z-20 backdrop-blur-3xl text-luxera'>
+         <div className='flex md:space-x-16 md:ml-32'>
+            <h3 className='aclonicareg md:text-3xl md:m-auto sm:text-xl my-auto md:ml-8 sm:ml-5 ml-2 font-bold'>Luxera</h3>
+            <ul className='md:flex space-x-6 pt-1  hidden md:block'>  
+                <Link to="/"><h5 className=' md:text-lg cursor-pointer'>Home</h5></Link>
+                <h5 className='md:text-lg cursor-pointer '>Features</h5>
                 <h5 className='cursor-pointer border  rounded-md pt-1  border-[#642a1a]'>
                   <select name="categories" onChange={(e)=>(navigate(`/dis_cards/${e.target.value}`,{state : true }))} className='bg-transparent  pl-2 pr-10 outline-none capitalize text-luxera text-md border-none' >
                   {
@@ -55,15 +55,15 @@ return (
                 </h5>
             </ul>
         </div>
-        <div className='flex space-x-8 mr-16'>
-          <div className='flex'>
-            <input type="text" onChange={(e)=>(setTextsearch(e.target.value))}  onKeyDown={handle_click} className='w-45 h-9 border-transparent outline-none border-2 focus:border-[#642a1a] rounded-full text-luxera pl-12 pr-4 relative bg-search_background placeholder-search_text' placeholder='Search' ></input>
-            <img src={searchimg} onClick={()=>Search()} className='h-7 absolute pt-2 pl-4' alt="" />    
+        <div className='flex gap-4'>
+          <div className='flex relative'>
+            <input type="text" onChange={(e)=>(setTextsearch(e.target.value))}  onKeyDown={handle_click} className='md:w-46 sm:w-40 sm:h-9 w-14 h-7 border-transparent outline-none border-2 focus:border-[#642a1a] rounded-full text-luxera pl-1 pr-4 relative bg-search_background placeholder-search_text sm:text-md text-sm sm:pl-4'  ></input>
+            <img src={searchimg} onClick={()=>Search()} className='sm:h-7 h-4 absolute sm:right-3 right-2 top-1.5' alt="" />    
           </div>
-        <ul className='flex m-auto'>
-            <div onClick={()=>navigate("/login")}><img src={Img1} className='w-1/2 cursor-pointer' alt="user"/></div>
-            <a href="#"> <img src={Img2} className='cursor-pointer w-1/2 ' alt="wish" /></a>
-            <div onClick={()=>navigate("/basket")}><img src={Img3} className='cursor-pointer w-1/2' alt="basket"/></div>
+        <ul className='flex gap-0 m-auto'>
+            <div onClick={()=>navigate("/login")}><img src={Img1} className='md:w-1/2 w-2/5 my-auto cursor-pointer' alt="user"/></div>
+            <a href="#"> <img src={Img2} className='cursor-pointer md:w-1/2  w-2/5 my-auto' alt="wish" /></a>
+            <div onClick={()=>navigate("/basket")}><img src={Img3} className='cursor-pointer md:w-1/2  w-2/5 my-auto' alt="basket"/></div>
         </ul>   
        </div>      
     </div>

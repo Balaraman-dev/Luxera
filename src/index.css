@@ -17,6 +17,10 @@
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
+.scrollbar-none {
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE and Edge */
+}
 .landing_name{
   @apply mb-10 md:font-semibold  duration-300 border-b-2 border-transparent cursor-pointer focus:border-[#642a1a] hover:border-[#642a1a] ;
 }
