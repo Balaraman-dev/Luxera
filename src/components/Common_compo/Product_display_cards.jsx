@@ -34,11 +34,11 @@ const Product_display_cards = ({category}) => {
     },[card_val])
 
   return (
-    <div className='w-full px-5  flex flex-col '>
+    <div className='w-full md:px-5  flex flex-col '>
         {(cards.length==0) && <div className='w-full flex justify-center items-center mt-16'><img src={no_res}  className="1/10 " alt="No result" /></div>}
         {(cards.length==0) && <h3 className='w-full flex text-2xl text-luxera font-bold  justify-center my-10'>No Result Found !</h3> }
-        {(cards.length!=0) &&<h3 className='text-2xl text-luxera font-semibold  ml-7 capitalize mt-5 mb-5  w-1/5 '>{(!valstate && !category)?"Searches from " :" "} {card_val || cate} :</h3>}
-        <div className=' grid grid-cols-5'>
+        {(cards.length!=0) &&<h3 className='md:text-2xl text-lg text-luxera font-semibold ml-3 md:ml-7 capitalize mt-5 md:mb-5 md:w-1/5 '>{(!valstate && !category)?"Searches from " :" "} {card_val || cate} :</h3>}
+        <div className=' grid sm:grid-cols-2 md:grid-cols-5'>
          {cards && cards.map((card)=>
            <Card_entire rescard={card}/>)}        
         </div>

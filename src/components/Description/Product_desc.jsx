@@ -93,14 +93,14 @@ const Product_desc = ( { cart } ) => {
   return (
     <div>
        <div  className='md:flex  mt-15m-auto '>
-        <div className='relative  md:w-1/2 w-full ml-1  bg-gradient-to-r from-[#ffe8e2] to-[rgba(255,255,255,1)] h-1/12'> 
+        <div className='relative md:w-1/2 w-11/12  ml-1  bg-gradient-to-r from-[#ffe8e2] to-[rgba(255,255,255,1)] h-1/12'> 
           <div className='md:w-1/4 w-1/4 relative'>
             {list && <img src={lxr} className='absolute top-6 ' alt="" />}
           </div>  
 
           {list && <img src={list.images[indimg]} className='z-0 mx-auto md:mt-10 mt-4 md:max-w-[400px] md:min-w-[400px] w-2/3' alt=""/> }
 
-          <div className='w-full  flex justify-center flex-col items-end z-20 bottom-3 md:right-6 md:bottom-5 -right-3 space-y-2 absolute'>
+          <div className='w-full   flex justify-center flex-col items-end z-20 bottom-3 md:right-6 md:bottom-5 -right-3 space-y-2 absolute'>
               {list && 
               (list.images).map((img,index)=>(
                 <img key={index} src={img} onClick={()=>(setIndImg(index))} alt="" className='desc_inner min-w-12'/>
@@ -108,7 +108,7 @@ const Product_desc = ( { cart } ) => {
           </div>
 
         </div>
-        {list && <div className='md:w-1/2 w-full text-luxera space-y-3 p-3'>
+        {list && <div className='md:w-1/2 w-11/12 text-luxera space-y-3 py-3 m-auto'>
          <h2 className='md:text-2xl sm:text-xl  capitalize mb-2'>{list.brand}| {list.category}| Modern |{list.tags[1]} |Attractive {list.tags[0]}| Limited Edition |Sophisticated</h2>
          <span className='text-xl font-medium '> ₹ {Number(((list.price)*83.98).toFixed(0)).toLocaleString('en-IN')} </span> <span>{list.discountPercentage}% off</span>
          <h3 className='text-sm md:text-lg'>{list.description}</h3>
@@ -116,7 +116,7 @@ const Product_desc = ( { cart } ) => {
          <li className='ml-4 font-semibold'>{list.shippingInformation}</li>
          <li className='ml-4 font-bold text-luxera'>Overall Rating - {list.rating} *</li> 
          <h1 className='text-xl md:text-2xl text-green-700'>{list.availabilityStatus}</h1>
-            <div className='sm:flex h-1/12 w-10 space-x-24 ml-8 pt-4 hidden sm:block'>
+            <div className='sm:flex h-1/12 w-10 space-x-24 ml-8 pt-4 hidden sm:block '>
                 <img src={Imgdes1} className='w-10/12 h-10/12' alt="" />
                 <img src={Imgdes2} className='w-10/12 h-10/12' alt="" />
                 <img src={Imgdes3} className='w-10/12 h-10/12' alt="" />
@@ -128,7 +128,7 @@ const Product_desc = ( { cart } ) => {
               <li>Online support </li>
               <li>Payment Methods</li> 
             </ul> 
-            <div className='w-full flex md:flex  md:space-x-10 md:py-10'>
+            <div className='w-full flex  md:space-x-10 md:py-10 gap-3 '>
               
                 <Buton onClick={()=>navigate(`/payment/${(list.price)}`)} btn="Buy now"/>
              
@@ -141,7 +141,7 @@ const Product_desc = ( { cart } ) => {
         </div>}
        </div>
 
-       {list && <div className='md:space-y-3 space-y-2 ml-7 md:ml-32 mt-4 md:mt-8'>
+       {list && <div className='md:space-y-3 space-y-2 ml-4 w-11/12  md:ml-32 mt-4 md:mt-8'>
         <h2 className='text-luxera font-normal md:text-2xl'> Rating And Reviews </h2>
 
         <Product_desc_sliderreview bar={5} val={5}/>
@@ -152,7 +152,7 @@ const Product_desc = ( { cart } ) => {
 
        </div>}
 
-       <div className='flex md:flex-row flex-col my-7 md:my-14 w-full md:w-11/12 md:mx-auto mx-2.5 gap-4'>
+       <div className='flex md:flex-row flex-col my-7 md:my-14 md:w-11/12 w-full md:mx-auto pl-4 gap-4 '>
         {list && list.reviews.map((element)=>( <Product_desc_review_card listr={element}/>))}
        </div>
 
