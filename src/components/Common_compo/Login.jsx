@@ -6,10 +6,9 @@ const Login = () => {
   const navigate=useNavigate();
 
   return (
-      <div className='w-full flex justify-center items-center py-16'>
-        <div className='w-1/3 shadow-xl flex items-center flex-col shadow-gray-300 border-4 border-[#642a1a] space-y-4 bg-light text-luxera py-10 rounded-3xl'>
-            <h2 className='text-3xl'>Get Started By Signing </h2>
-            <h2 className='text-3xl pb-5'>Up</h2>
+      <div className='w-full flex justify-center items-center py-6 md:py-16'>
+        <div className='md:w-1/3 w-11/12 shadow-xl flex items-center flex-col shadow-gray-300 border-2 md:border-4 border-[#642a1a] space-y-4 bg-light text-luxera py-4 md:py-10 rounded-3xl'>
+            <h2 className='text-2xl md:p-0 p-4 md:text-3xl'>Get Started By Signing Up</h2>
           <div className='space-y-7 w-3/4 flex items-center flex-col text-luxera'>
               <div className='relative mr-10'>
                 <input id='name' type="text" placeholder='eg. John' className='inputlog'onChange={(e)=>setName(e.target.value)}/>

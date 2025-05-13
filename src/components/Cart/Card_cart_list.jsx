@@ -36,24 +36,23 @@ const Card_cart_list = ({ ids, setCost, remEle}) => {
   return (
     <div>
       {basket.map((item) => (
-        <div key={item.id} onClick={ () => navigate(`/details/${item.id}`)} className='bg-white rounded-lg m-3 flex p-1'>
+        <div key={item.id} onClick={ () => navigate(`/details/${item.id}`)} className='bg-white rounded-lg md:m-3 mt-4 flex p-1'>
           <img 
             src={item.images ? item.images[0] : ""}  
-            className='w-1/3 rounded-md  bg-gradient-to-r p-2 from-[#ffe7e0] to-[#ffffff]' 
-            style={{ maxWidth: '220px', maxHeight: '220px' }} 
+            className='w-1/3 rounded-md  bg-gradient-to-r p-2 from-[#ffe7e0] to-[#ffffff] max-w-[220px] min-w-[100px] md:min-w-[220px]' 
             alt="img" 
           />
-          <div className='space-y-2 py-6 px-1'>
-            <h2 className='capitalize'>{item.category} | Modern | {item.brand} | {item.tags.join("| ")} | New Piece  </h2>
-            <div className='flex space-x-2 font-semibold'>
+          <div className='md:space-y-2 md:py-6 py-2 px-1'>
+            <h2 className='capitalize text-sm md:text-lg'>{item.category} | Modern | {item.brand} | {item.tags.join("| ")} | New Piece  </h2>
+            <div className='md:flex space-x-2 font-semibold'>
               <div>₹ { Number(((item.price) * 83.98).toFixed(0)).toLocaleString('en-IN')}</div>
               <span className='my-auto font-thin text-sm'>{item.discountPercentage}% off</span>
             </div>
             <div className='flex w-1/2'>
               <h2>Quantity</h2>
-              <input  type="number" className='outline outline-1 border-none rounded-md pl-1 w-3/12 ml-4' />
+              <input  type="number" className='outline outline-1 border-none rounded-md md:pl-1 md:w-3/12 w-8 md:ml-4 ml-1' />
             </div>
-            <button className='bg-luxera font-thin text-white rounded-md px-7 py-1 hover:bg-[#842a11]'  onClick={(event) => { handleChild(event); removeItem(item.id); 
+            <button className='bg-luxera font-thin text-white rounded-md px-7 md:text-lg text-sm mt-2 py-1 hover:bg-[#842a11]'  onClick={(event) => { handleChild(event); removeItem(item.id); 
         }} > Remove</button>
           </div>
         </div>

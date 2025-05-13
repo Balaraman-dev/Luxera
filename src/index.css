@@ -28,13 +28,13 @@
   @apply md:text-xl text-sm font-semibold;
 }
 .desc_inner{
-  @apply w-1/12 mr-10 border-transparent ring-1 duration-300 ring-red-100 rounded-lg border-l-4 hover:bg-gradient-to-r from-[#ffe8e2] to-white hover:border-[#712D2D];
+  @apply w-1/12 mr-10  ring-1 duration-300 ring-red-100 rounded-md sm:rounded-lg sm:border-l-4 border-l-2 border-transparent hover:bg-gradient-to-r from-[#ffe8e2] to-white hover:border-[#712D2D];
 }
 .payment-sty{
-  @apply p-2 placeholder-[#6d4e45] focus:bg-white text-luxera focus:text-white rounded-md w-3/5 outline-none border-[#642a1a] border-2 focus:placeholder:text-[#d4aeae] focus:bg-luxera;
+  @apply md:p-2 py-1 px-2 placeholder-[#6d4e45] focus:bg-white text-luxera focus:text-white rounded-md md:w-3/5 w-full outline-none border-[#642a1a] md:border-2 border md:text-lg focus:placeholder:text-[#d4aeae] focus:bg-luxera;
 }
 .paypage{
-  @apply flex w-1/5 my-auto duration-200 shadow-shad px-5 py-4 space-x-3 rounded-md cursor-pointer hover:scale-95;
+  @apply flex w-10/12 md:w-1/5 my-auto duration-200 shadow-shad px-5 md:py-4 py-2 space-x-3 rounded-md cursor-pointer hover:scale-95;
 }
 .baskettype{
   @apply w-3/4 bg-white px-7 text-lg py-1 rounded-md border-2 border-[#642a1a] focus:bg-luxera focus:text-white hover:bg-luxera hover:text-white;
@@ -49,5 +49,5 @@
   @apply absolute  -top-3 peer-focus:bg-transparent left-3 px-1 py-0 bg-[#ffe7e0] transition-all duration-300  ; 
 }
 .pay_img{
-  @apply w-[6%] absolute top-2 left-[51%];
+  @apply w-[6%] absolute top-2 left-[51%] md:block hidden;
 }

@@ -103,7 +103,7 @@ const Product_desc = ( { cart } ) => {
           <div className='w-full  flex justify-center flex-col items-end z-20 bottom-3 md:right-6 md:bottom-5 -right-3 space-y-2 absolute'>
               {list && 
               (list.images).map((img,index)=>(
-                <img key={index} src={img} onClick={()=>(setIndImg(index))} alt="" className='desc_inner min-w-8'/>
+                <img key={index} src={img} onClick={()=>(setIndImg(index))} alt="" className='desc_inner min-w-12'/>
               ))}
           </div>
 
