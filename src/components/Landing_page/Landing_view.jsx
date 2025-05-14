@@ -61,7 +61,7 @@ const Landing_view = ({recent}) => {
           <div className='w-3/4 flex md:flex-row flex-col mt-5 gap-2'>
             <button className='w-3/4 md:w-1/3 bg-luxera md:text-xl rounded-lg px-2 py-2 sm:px-4 text-white duration-150 hover:scale-95 sm:text-sm text-[10px] ' onClick={() =>navigate("/login")}>Shop now</button>
 
-            <button className='w-3/4 md:w-1/3 bg-luxera sm:text-sm text-[10px] md:text-xl rounded-lg py-2 text-white text-md duration-150 hover:scale-95' onClick={()=>setAll(!all)}> View all </button>   
+            <button className='w-3/4 md:w-1/3 bg-luxera sm:text-sm text-[10px] md:text-xl rounded-lg py-2 text-white text-md duration-150 hover:scale-95' onClick={()=>setAll(!all)}>{`View ${all ? "less" : "all"}`}</button>   
           </div>
         </div>
         {imgs.products && (imgs.products).length>0 && <img className='md:w-5/12 w-1/3 md:max-h-500 max-h:96 cursor-pointer' src={imgs.products[2].images[0]} onClick={ () => navigate(`/details/${imgs.products[2].id}`)} alt="bed" /> } 
